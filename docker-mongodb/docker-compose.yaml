@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mongo:
+    container_name: mongo
+    build: ./df_for_mongodb/
+    volumes:
+      - ./database_mongodb/data:/data/db
+    ports:
+      - 27017:27017
+    restart: always
